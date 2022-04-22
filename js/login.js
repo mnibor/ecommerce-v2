@@ -7,12 +7,22 @@ const spanPassword = document.getElementById('span-password');
 
 email.addEventListener('blur', function(event){
     event.preventDefault();
-    validarEmail(email.value);
+    // validarEmail(email.value);
 });
 
 password.addEventListener('blur', function(event){
     event.preventDefault();
-    validarPassword(password.value);
+
+    console.log(password.value);
+
+    if (password.value.length < 8 || password.value.length > 16) {
+        spanPassword.innerHTML = 'La contraseña debe tener entre 8 y 16 caracteres lorem 10';
+        spanPassword.classList.add('span-password-invalid');
+    } else {
+        
+    }
+
+    // validarPassword(password.value);
 });
 
 
@@ -35,11 +45,17 @@ function validarEmail(email) {
 }
 
 function validarPassword(password) {
+
+    console.log(password);
+
     var expresion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
     if (password.lenght < 8 || password.lenght > 16) {
-        spanPassword.innerHTML = 'La contraseña debe tener entre 8 y 16 caracteres';
+        spanPassword.innerHTML = 'La contraseña debe tener entre 8 y 16 caracteres. No admite que se ingresen números. Debe incluir al menos una mayúscula';
         spanPassword.classList.add('span-password-invalid');
+    } else {
+        spanPassword.innerHTML = '';
+        spanPassword.classList.remove('span-password-invalid');
     }
 
     if(!expresion.test(password)){

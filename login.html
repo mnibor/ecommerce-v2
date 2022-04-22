@@ -73,11 +73,17 @@
 
                         <label class="formulario__label" for="email">Correo Electrónico</label>
                         <input class="formulario__input" type="text" name="email" id="email" data-form-correo>
-                        <span id="span-email" class="span-email">email incorrecto</span>
+                        <div>
+                            <span id="span-email" class="span-email">email incorrecto</span>
+                        </div>
                         
                         <label class="formulario__label" for="email">Contraseña</label>
-                        <input class="formulario__input" type="password" name="password" id="password" data-form-password>
-                        <span id="span-password" class="span-password">contraseña incorrecta</span>
+                        <input class="formulario__input" type="password" name="password" id="password" maxlength="16" data-form-password>
+                        <div>
+                            <span id="span-password" class="span-password">contraseña incorrecta</span>
+                        </div>
+                        
+                        
 
                         <p id="mensaje-success" class="mensaje-satisfactorio">Ingreso Satisfactorio...</p>
                         
