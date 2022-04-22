@@ -1,0 +1,174 @@
+.producto-detalle {
+    width: 100%;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.producto-detalle__container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.producto-detalle__relacionados {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.producto-detalle__container-img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.producto-detalle__container-textos {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.producto-detalle__container-titulo {
+    font-size: 52px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.producto-detalle__container-precio {
+    font-size: 20px;
+}
+
+.producto-detalle__container-descripcion {
+    font-size: 18px;
+    margin: 0;
+}
+
+.producto-titulo-texto {
+    font-size: 32px;
+}
+
+/* SIMILARES */
+
+/* STARS-WARS */
+.starswars__container {
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.starswars__container-productos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+/* COMPONENTE DE CARD DE PRODUCTO - EN LISTADO */
+.cardProducto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.cardProducto__imagen-img {
+    width: 140px !important;
+    height: 140px !important;
+}
+
+.cardProducto__texto {
+    margin-top: 5px;
+    
+}
+
+.cardProducto__titulo {
+    font-size:14px;
+    line-height: 0;
+    margin: 0;
+}
+
+.cardProducto__precio {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 0;
+    padding: 3px 0;
+}
+
+.cardProducto__link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 0;
+    text-decoration: none;
+    margin: 0;
+    color: #2A7AE4;
+}
+
+@media screen and (max-width: 768px) {
+    .producto-detalle__container {
+        width: 90%;
+    }
+
+    .producto-detalle__relacionados {
+        width: 90%;
+    }
+
+    .producto-detalle__container-img {
+        width: 250px;
+        height: auto;
+    }
+
+    .producto-detalle__container-textos {
+        margin-left: 10px;
+    }
+
+    .producto-detalle__container-titulo {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .producto-detalle__container-precio {
+        font-size: 16px;
+    }
+
+    .producto-detalle__container-descripcion {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .producto-titulo-texto {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .producto-detalle__container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .producto-detalle__container-textos {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .producto-detalle__container-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .cardProducto__imagen-img {
+		width: 155px;
+		height: 155px;
+	}
+
+	.producto-titulo {
+		font-size: 16px;
+	}
+}

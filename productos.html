@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AluraGeek</title>
+    <link rel="icon" href="images/ico.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,600;1,200;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="stylesheet" href="css/header-login.css">
+
+
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/todos-productos.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/formulario.css">
+
+</head>
+<body>
+    <div class="container">
+		<header class="header">
+			<div class="header__menu">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a class="header__logo-link" href="index.html"><img class="header__logo-img" src="images/logo.svg" alt=""></a>
+                    </div>
+
+                    <div class="header__busqueda">
+                        <form class="header__formulario">
+                            <input class="formulario__input-busqueda" type="search" placeholder="Qué deseas buscar ?" aria-label="Search">
+                            <button class="boton__busqueda" type="submit"><i class="boton__icono fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="header__botones">
+                    <div class="header__buscar">
+                        <a class="boton__buscar boton--relative" href="#" role="button">
+                            <!-- BLOQUE -->
+                            <i class="boton__icono fas fa-search"></i></i>
+                        </a>
+                    </div>
+
+                    <div class="header__login">
+                        <a class="boton__login boton--relative boton--verde" href="login.html" role="button">
+                            <span class="boton__texto">Ingresar</span>
+                            <i class="boton__icono fas fa-sign-in-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="header__login-simplificado">
+                        <a class="boton__login-simplificado boton--relative boton--verde" href="login.html" role="button">
+                            <i class="boton__icono fas fa-sign-in-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+		</header>
+
+		<main class="productos-todos">
+            <div class="productos-todos__container">
+                <div class="stars-wars">
+                    <div class="starswars__container">
+                        <div class="producto-titulo">
+                            <h1 class="producto-titulo-texto">Todos los Productos</h1>
+                            <a class="producto-titulo-link" href="producto_nuevo.html">Nuevo Producto <span><i class="fas fa-plus-circle"></i></span></a>
+                        </div>
+        
+                        <div class="starswars__container-productos">
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/stars-wars/01.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 60.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/stars-wars/02.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 60.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/stars-wars/03.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 60.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/stars-wars/04.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 60.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/stars-wars/05.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 60.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/stars-wars/06.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 60.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="consolas__container-productos">
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/consolas/01.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Control ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 200.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/consolas/02.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Control y Consola ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 560.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/consolas/03.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Consola ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 240.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/consolas/04.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Control ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 180.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/consolas/05.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Consola ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 260.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/consolas/06.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>GameBoy Color</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 160.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="diversos__container-productos">
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/diversos/01.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Remera Atari</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 200.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/diversos/02.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Remera SNES</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 560.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/diversos/03.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Muñeco SONIC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 240.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/diversos/04.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Producto ABC</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 180.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/diversos/05.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Remera Acsis</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 260.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+        
+                            <div class="cardProducto">
+                                <div class="cardProducto__imagen">
+                                    <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="images/diversos/06.jpg" alt="producto"></a>
+                                </div>
+                                <div class="cardProducto__texto">
+                                    <div class="cardProducto__titulo">
+                                        <p>Muñeco Pokemon</p>   
+                                    </div>
+                                    <div class="cardProducto__precio">
+                                        <p>$ 160.00</p> 
+                                    </div>
+                                    <a class="cardProducto__link" href="producto_detalle.html">Ver Producto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</main>
+
+        <div class="contacto">
+            <div class="contacto__container">
+                <div class="contacto__menu">
+                    <div class="contacto__logo">
+                        <a class="header__logo-link" href="index.html"><img class="header__logo-img" src="images/logo.svg" alt=""></a>
+                    </div>
+    
+                    <div class="contacto__nav">
+                        <ul class="contacto__nav-lista">
+                            <li class="contacto__nav-item"><a class="contacto__nav-link" href="">Quienes Somos</a></li>
+                            <li class="contacto__nav-item"><a class="contacto__nav-link" href="">Política de Privacidad</a></li>
+                            <li class="contacto__nav-item"><a class="contacto__nav-link" href="">Programa de Fidelidad</a></li>
+                            <li class="contacto__nav-item"><a class="contacto__nav-link" href="">Nuestras Tiendas</a></li>
+                            <li class="contacto__nav-item"><a class="contacto__nav-link" href="">Quiero ser Franquiciado</a></li>
+                            <li class="contacto__nav-item"><a class="contacto__nav-link" href="">Anuncie Aquí</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="contacto__formulario">
+                    <div class="contacto__formulario-titulo">
+                        <h3>Hable con Nosotros...</h3>
+                    </div>
+    
+                    <div class="contacto__formulario-form">
+                        <form class="form" action="">
+                            <label class="formulario__label" for="nombre">Su nombre y Apellido</label>
+                            <input class="formulario__input" type="text" name="nombre" id="nombre" data-form-nombre>
+                            <span id="span-nombre" class="span-nombre"></span>
+
+                            <label class="formulario__label" for="mensaje">Escriba su mensaje</label>
+                            <textarea class="formulario__textarea" name="mensaje" id="mensaje" cols="30" rows="10" data-form-mensaje></textarea>
+                            <span id="span-mensaje" class="span-mensaje"></span>
+
+
+                            <p id="mensaje-success" class="mensaje-satisfactorio">El mensaje se ha enviado correctamente<br>Muy pronto nos pondremos en contacto contigo.</p>
+
+                            <button type="submit" class="formulario__boton" role="button" data-form-btn-mensaje>
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<footer class="footer">
+            <p class="footer__texto">Desarrollado por Marcelo Robin</p><br>
+            <p class="footer__texto">&copy;2022</p>
+		</footer>
+	</div>
+
+
+    
+    <script src="js/contacto.js"></script>
+</body>
+</html>

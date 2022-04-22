@@ -1,0 +1,10 @@
+html {
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    display: flex;
+	flex-direction: column;
+}
+

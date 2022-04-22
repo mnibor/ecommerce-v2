@@ -1,0 +1,58 @@
+.productos-todos {
+    width: 100%;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.producto-titulo-texto {
+    font-size: 32px;
+}
+
+.productos-todos__container {
+    width: 80%;
+    margin: auto;
+}
+
+.starswars__container {
+	width: 100% !important;
+    background-color: #E5E5E5 !important;
+}
+
+.starswars__container-productos {
+    margin-bottom: 40px;
+}
+
+.consolas__container-productos {
+    margin-bottom: 40px;
+}
+
+.diversos__container-productos {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .producto-titulo-texto {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .producto-titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-titulo-link {
+        margin-top: 20px;
+    }
+
+    .producto-titulo-texto {
+        font-size: 22px;
+    }
+}

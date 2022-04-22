@@ -1,0 +1,88 @@
+.productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 30px;
+    margin: 40px 0;
+    grid-template-areas:    "stars-wars stars-wars stars-wars stars-wars stars-wars stars-wars"
+                            "consolas consolas consolas consolas consolas consolas"
+                            "diversos diversos diversos diversos diversos diversos";
+}
+
+/* STARS-WARS */
+.stars-wars {
+    grid-area: stars-wars;
+    background-color: #ffffff;
+}
+
+.starswars__container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.starswars__container-productos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+/* CONSOLAS */
+.consolas {
+    grid-area: consolas;
+    background-color: #ffffff;
+}
+
+.consolas__container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.consolas__container-productos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+/* DIVERSOS */
+.diversos {
+    grid-area: diversos;
+    background-color: #ffffff;
+}
+
+.diversos__container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+}
+
+.diversos__container-productos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+@media screen and (max-width: 470px) {
+    .starswars__container {
+		width: 90%;
+	}
+
+	.consolas__container {
+		width: 90%;
+	}
+	.diversos__container {
+		width: 90%;
+	}
+}
+
+

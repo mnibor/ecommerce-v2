@@ -1,0 +1,17 @@
+html {
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 362px) {
+    
+}

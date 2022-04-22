@@ -1,0 +1,204 @@
+/* HEADER */
+.header {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__menu {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+/* SECCION DEL LOGO - BUSQUEDA Y LOGIN */
+
+.header__logo {
+    padding-right: 20px;
+}
+
+/* SECCION DE LOS BOTONES DE BUSQUEDA Y LOGIN */
+
+.header__botones {
+    display: flex;
+    align-items:center;
+}
+
+.header__buscar {
+    margin-right: 10px;
+    display: none;
+}
+
+.header__login-simplificado {
+    display: none;
+}
+
+/*  CONTAINER CON LA IMAGEN DE FONDO */
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__banner-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-top: 150px;
+}
+
+.header__banner {
+    width: 100%;
+    height: 360px;
+
+    background-color: #2A7AE4;
+    background: url('../images/cabecera-1440.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header__banner-textos {
+
+}
+
+.header__banner-titulo {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 4em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.header__banner-subtitulo {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 2em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.header__banner-boton {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .header__banner {
+        width: 100%;
+        height: 360px;
+
+        background: url('../images/cabecera-1440.jpg') no-repeat center center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .header__banner-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 120px;
+    }
+
+    .header__busqueda {
+        display: none;
+    }
+
+    .header__buscar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .header__login {
+        display: none;
+    }
+
+    .header__login-simplificado {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 362px) {
+    .header__banner {
+        width: 100%;
+        height: 200px;
+
+        background: url('../images/cabecera-1440.jpg') no-repeat center center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .header__banner-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+    }
+
+    .header__botones {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boton__buscar {
+        display:none !important;
+    }
+
+    .header__banner-textos {
+        top: 0;
+        left: 0;
+    }
+    
+    .header__banner-titulo {
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 22px;
+    }
+    
+    .header__banner-subtitulo {
+        color: #FFFFFF;
+        font-weight: normal;
+        font-size: 14px;
+
+        margin-top: 10px;
+    }
+
+    
+    .header__banner-btn {
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: #2A7AE4;
+        color: #FFFFFF;
+        padding: 16px;
+    }
+
+    .header__busqueda {
+        display: none;
+    }
+
+    .header__buscar {
+        display: block;
+    }
+
+    .header__botones {
+        display: flex;
+        flex-direction: column;
+        justify-content:end;
+    }
+
+}
