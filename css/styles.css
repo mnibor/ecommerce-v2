@@ -12,7 +12,7 @@ html {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid black;
+    border: 2px solid rgb(53, 53, 53);
 }
 
 .tabla__mensajes-row {

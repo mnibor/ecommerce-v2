@@ -1,3 +1,5 @@
+import { clientServices } from './services.js';
+
 const nombre = document.querySelector('[data-form-nombre]');
 const spanNombre = document.getElementById('span-nombre');
 
@@ -7,45 +9,33 @@ const spanMensaje = document.getElementById('span-mensaje');
 const mensajeSuccess = document.getElementById('mensaje-success');
 const btnMensaje = document.querySelector('[data-form-btn-mensaje]');
 
+const formulario = document.querySelector('.form');
 
-btnMensaje.addEventListener('click', function(event){
+const campos = {
+    nombreMsj: false,
+    mensajeMsj: false
+}
 
+formulario.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    if (nombre.value === '' && mensaje.value === '') {
-        nombre.classList.add('formulario__input-invalid');
-        spanNombre.classList.add('span-nombre-invalid');
-        spanNombre.innerHTML = 'No puede ser nulo (Al menos 8 caracteres)';
-
-        mensaje.classList.add('formulario__textarea-invalid');
-        spanMensaje.classList.add('span-mensaje-invalid');
-        spanMensaje.innerHTML = 'Debe escribir un mensaje';
-        return false;
-    } 
-
-    if (nombre.value === null || nombre.value === '') {
-        nombre.classList.add('formulario__input-invalid');
-        spanNombre.classList.add('span-nombre-invalid');
-        spanNombre.innerHTML = 'No yyyyyyyyyyyyyyyyyyyyyyyyaracteres)';
-        return false;
+    validarFormulario();
+    if (campos.nombreMsj && campos.mensajeMsj) {
+        clientServices.crearMensaje(nombre.value, mensaje.value).then(respuesta => {
+            //Mensaje enviado satisfactoriamente: habría que ver adonde lo redirecciono
+            //window.location.href = '[alguna direccion html]';
+            console.log(respuesta);
+        }).catch((error) => alert('Ocurrió un error al enviar el mensaje'));
+    } else {
+        
     }
-
-    if (mensaje.value === null || mensaje.value === '') {
-        mensaje.classList.add('formulario__textarea-invalid');
-        spanMensaje.classList.add('span-mensaje-invalid');
-        spanMensaje.innerHTML = 'Debe escribir un mensaje';
-        return false;
-    }
-
-    mensajeSuccess.classList.add('mensaje-satisfactorio-valid');
-    setTimeout(function(){
-        limpiarFormulario();
-        }, 5000);
-
 });
 
-nombre.addEventListener('blur', function(event){
+function validarFormulario() {
+    validarNombre(nombre.value);
+    validarMensaje(mensaje.value);
+};
 
+nombre.addEventListener('blur', function(event){
     let nombreMinusculas = nombre.value.toLowerCase();
     let arregloNombre = nombreMinusculas.replace(/\b[a-z]/g,c=>c.toUpperCase());
     nombre.innerHTML = arregloNombre;
@@ -72,8 +62,23 @@ function validarNombre (nombre) {
 
     if(compNombre == false){
         errorNombre();
+        campos.nombreMsj = false;
     } else {
         existeNombre();
+        campos.nombreMsj = true;
+    }
+}
+
+function validarMensaje (mensaje) {
+    let patronMensaje = /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
+    let compMensaje = patronMensaje.test(mensaje);
+
+    if(compMensaje == false){
+        errorMensaje();
+        campos.mensajeMsj = false;
+    } else {
+        existeNombre();
+        campos.mensajeMsj = true;
     }
 }
 

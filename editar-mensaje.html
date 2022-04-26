@@ -71,19 +71,28 @@
                 <div class="stars-wars">
                     <div class="starswars__container">
                         <div class="producto-titulo">
-                            <h1 class="producto-titulo-texto">Mensajes Recibidos</h1>
+                            <h1 class="producto-titulo-texto">Mensajes Recibidos - Editar Mensaje</h1>
                         </div>
         
                         <div class="starswars__container-productos">
-                            <table class="tabla__mensajes">
-                                <tr class="tabla__mensajes-row">
-                                    <td class="tabla__mensajes-cabecera">ENVIADO POR</td>
-                                    <td class="tabla__mensajes-cabecera">MENSAJE</td>
-                                    <td class="tabla__mensajes-cabecera acciones">ACCIONES</td>
-                                </tr>
-                                
-                                <tbody data-table></tbody>
-                            </table>
+                            <div class="contacto__formulario-form">
+                                <form class="form" action="">
+                                    <label class="formulario__label" for="nombre">Nombre y Apellido</label>
+                                    <input class="formulario__input" type="text" name="nombre" id="nombre" data-form-nombre>
+                                    <span id="span-nombre" class="span-nombre"></span>
+        
+                                    <label class="formulario__label" for="mensaje">Mensaje</label>
+                                    <textarea class="formulario__textarea" name="mensaje" id="mensaje" cols="30" rows="10" data-form-mensaje></textarea>
+                                    <span id="span-mensaje" class="span-mensaje"></span>
+        
+        
+                                    <p id="mensaje-success" class="mensaje-satisfactorio">El mensaje se ha enviado correctamente<br>Muy pronto nos pondremos en contacto contigo.</p>
+        
+                                    <button type="submit" class="formulario__boton" role="button" data-form-btn-mensaje>
+                                        Editar Mensaje
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,6 +107,6 @@
 		</footer>
 	</div>
 
-    <script type="module" src="js/client-controller.js"></script>
+    <script type="module" src="js/actualizar-mensaje-controller.js"></script>
 </body>
 </html>
