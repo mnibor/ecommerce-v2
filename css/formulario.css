@@ -73,7 +73,18 @@
 
 .mensaje-satisfactorio-valid {
     display: block;
-    
+}
+
+.mensaje-satisfactorio-invalid {
+    margin: 0;
+    margin-top: 5px;
+    padding: 6px 10px;
+    background-color: red;
+    color:#F5F5F5;
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    display: block;
 }
 
 .formulario__boton {

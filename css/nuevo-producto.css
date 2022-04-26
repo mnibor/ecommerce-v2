@@ -22,7 +22,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 5px dashed #332f2c;
+    border: 3px dashed #332f2c;
     height: 22rem;
     width: 100%;
     border-radius: 10px;
@@ -31,7 +31,15 @@
 .drop-area.active {
     background-color: #b8d4fe;
     color: black;
-    border: 2px dashed #618a61;
+    border: 3px dashed #618a61;
+    border-radius: 10px;
+}
+
+.drop-area.error {
+    background-color: #ffbbbb;
+    color: black;
+    border: 3px dashed #fd4545;
+    border-radius: 10px;
 }
 
 .drop-area__titulo {
@@ -44,6 +52,7 @@
     padding: 10px 25px;
     border: 0;
     font-size: 16px;
+    font-weight: bold;
     outline: none;
     background-color: #2A7AE4;
     color: white;

@@ -4,76 +4,95 @@ const btnImagen = document.querySelector('.drop-area__btn');
 const inputImagen = document.querySelector('#input-file');
 let files;
 
+const campos = {
+    imagenPr: false,
+    nombrePr: false,
+    precioPr: false,
+    descripcionPr: false
+}
 
-dragToUploadForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (files) {
-    e.submit();
-  }
+btnImagen.addEventListener('click', (event) => {
+    //si el usuario hace clic en el botón, entonces la entrada también hizo clic
+    inputImagen.click();
 });
 
-btnImagen.addEventListener("click", (e) => {
-  inputImagen.click(); //if user click on the button then the input also clicked
-});
-
-inputImagen.addEventListener("change", function () {
-  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
-  files = this.files[0];
-  dropArea.classList.add("active");
-  showFile(files); //calling function
+inputImagen.addEventListener('change', function () {
+    //obtener el archivo de selección de usuario y [0] esto significa que si el usuario selecciona varios archivos, seleccionaremos solo el primero
+    files = this.files[0];
+    dropArea.classList.add('active');
+    //llamamos a la función
+    showFile(files);
 });
 
 //If user Drag File Over DropArea
-dropArea.addEventListener("dragover", (event) => {
-  event.preventDefault(); //preventing from default behaviour
-  dropArea.classList.add("active");
-  dropText.textContent = "Suelta para subir la imagen";
+dropArea.addEventListener('dragover', (event) => {
+    event.preventDefault(); //preventing from default behaviour
+    dropArea.classList.add('active');
+    dropText.textContent = 'Suelta para subir la imagen';
 });
 
 //If user leave dragged File from DropArea
-dropArea.addEventListener("dragleave", () => {
-  dropArea.classList.remove("active");
-  dropText.textContent = "Arrastra y suelta la imagen";
+dropArea.addEventListener('dragleave', () => {
+    dropArea.classList.remove('error');
+    dropText.textContent = 'Arrastra y suelta una imagen';
+    dropArea.classList.remove('active');
 });
 
 //If user drop File on DropArea
-dropArea.addEventListener("drop", (event) => {
-  event.preventDefault(); //preventing from default behaviour
-  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
-  files = event.dataTransfer.files;
-  showFile(files); //calling function
-  dropArea.classList.remove("active");
-  dropText.textContent = "Arrastra y suelta la imagen";
+dropArea.addEventListener('drop', (event) => {
+    event.preventDefault(); //preventing from default behaviour
+    //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+    files = event.dataTransfer.files;
+    showFile(files); //calling function
+    dropArea.classList.remove('active');
 });
 
 function showFile(files) {
-  [...files].forEach((file) => {
-    let fileType = file.type; //getting selected file type
-    let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+
+    //Obtenemos el tipo de archivo
+    let fileType = files.type;
+
+    // Agregamos las extensiones de las imagenes admitidas, en formato de array
+    let validExtensions = ['image/jpeg', 'image/jpg', 'image/png'];
+
     if (validExtensions.includes(fileType)) {
-      //if user selected file is an image file
-      let fileReader = new FileReader(); //creating new FileReader object
-      fileReader.onload = () => {
-        let fileURL = fileReader.result; //passing user file source in fileURL variable
-        // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
-        const image = document.createElement("img");
-        image.src = fileURL;
-        image.setAttribute("width", "50px");
-        let imgTag = `<img src="${fileURL}" alt="image">`; //creating an img tag and passing user selected file source inside src attribute
-        //dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
-        document.querySelector("#preview").appendChild(image);
-      };
-      fileReader.readAsDataURL(file);
+
+        //Si el usuario subió una imagen
+        let fileReader = new FileReader();
+
+        //creating new FileReader object
+        fileReader.onload = () => {
+
+            //passing user file source in fileURL variable
+            let fileURL = fileReader.result;
+
+            // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
+            const image = document.createElement('img');
+            image.src = fileURL;
+            image.setAttribute('width', '50px');
+            campos['imagenPr'] = true;
+
+            //creating an img tag and passing user selected file source inside src attribute
+            let imgTag = `<img src='${fileURL}' alt='image'>`;
+            //dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
+            document.querySelector('#preview').appendChild(image);
+        };
+
+        fileReader.readAsDataURL(files);
     } else {
-      alert("Está intentando subir un archivo que no es válido");
-      dropArea.classList.remove("active");
-      dropText.textContent = "Arrastra y suelta la imagen";
+
+        alert('Está intentando subir un archivo que no es válido');
+        dropArea.classList.remove('active');
+        campos['imagenPr'] = false;
+        // dropArea.classList.add('error');
+        // dropText.textContent = 'Error: Arrastra y suelta una imagen';
+
     }
-  });
 }
 
-
 // El resto del formulario
+
+const formulario = document.querySelector('.dragToUploadForm');
 
 const nombreProducto = document.querySelector('#nombreProducto');
 const precioProducto = document.querySelector('#precioProducto');
@@ -81,103 +100,160 @@ const descripcionProducto = document.querySelector('#descripcionProducto');
 
 const spanNombreProducto = document.querySelector('.span-nombre-producto');
 const spanPrecioProducto = document.querySelector('.span-precio-producto');
-const spanDescripcionProducto = document.querySelector('.span-descripcion-producto'); 
+const spanDescripcionProducto = document.querySelector('.span-descripcion-producto');
+
+const inputs = document.querySelectorAll('#dragToUploadForm input');
+
+const expresionesRegulares = {
+    nombreProd: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/,
+    precioProd: /^[0-9]{1,5}[.,][0-9]{2}$/,
+    descripcionProd: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/
+};
 
 const btnEnviar = document.querySelector('.formulario__boton');
 
+dragToUploadForm.addEventListener('submit', (event) => {
+    // Controlo el evento de apretar el boton submit
+    event.preventDefault();
+});
+
+const validarFormulario = (e) => {
+    switch (e.target.name) {
+        case 'nombreProducto':
+            if (expresionesRegulares.nombreProd.test(e.target.value)) {
+                nombreProducto.classList.remove('formulario__input-invalid');
+                nombreProducto.classList.add('formulario__input-valid');
+                spanNombreProducto.classList.remove('span-nombre-producto-invalid');
+                campos['nombrePr'] = true;
+            } else {
+                nombreProducto.classList.add('formulario__input-invalid');
+                spanNombreProducto.classList.add('span-nombre-producto-invalid');
+                spanNombreProducto.innerHTML = 'El nombre del producto debe tener entre 8 y 25 caracteres';
+                campos['nombrePr'] = false;
+            }
+            
+            break;
+
+        case 'precioProducto':
+            if (expresionesRegulares.precioProd.test(e.target.value)) {
+                precioProducto.classList.remove('formulario__input-invalid');
+                precioProducto.classList.add('formulario__input-valid');
+                spanPrecioProducto.classList.remove('span-precio-producto-invalid');
+                campos['precioPr'] = true;
+            } else {
+                precioProducto.classList.add('formulario__input-invalid');
+                spanPrecioProducto.classList.add('span-precio-producto-invalid');
+                spanPrecioProducto.innerHTML = 'El precio solo lleva separador de decimales (un punto o una coma';
+                campos['precioPr'] = false;
+            }
+        
+            break;
+
+        case 'input-file':
+
+            break;
+    
+        default:
+            break;
+    } 
+
+    descripcionProducto.addEventListener('keyup', (e) => {
+        if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
+            descripcionProducto.classList.remove('formuario__textarea-invalid');
+            descripcionProducto.classList.add('formuario__textarea-valid');
+            spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
+            campos['descripcionPr'] = true;
+        } else {
+            descripcionProducto.classList.add('formuario__textarea-invalid');
+            spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
+            spanDescripcionProducto.innerHTML = 'Debe incluir una descripcion del producto. Solo caracteres alfabéticos';
+            campos['descripcionPr'] = false;
+        }
+    });
+
+    descripcionProducto.addEventListener('blur', (e) => {
+        if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
+            descripcionProducto.classList.remove('formulario__textarea-invalid');
+            descripcionProducto.classList.add('formulario__textarea-valid');
+            spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
+            campos['descripcionPr'] = true;
+        } else {
+            descripcionProducto.classList.add('formulario__textarea-invalid');
+            spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
+            spanDescripcionProducto.innerHTML = 'Debe incluir una descripcion del producto. Solo caracteres alfabéticos';
+            campos['descripcionPr'] = false;
+        }
+    });
+
+    
+    // this.submit();
+}
+
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validarFormulario);
+    input.addEventListener('blur', validarFormulario);
+});
 
 
 
-btnEnviar.addEventListener('click', function(event){
-	event.preventDefault();
 
-	console.log(nombreProducto.value);
 
-	if (nombreProducto.value === '' || nombreProducto.value === null) {
+btnEnviar.addEventListener('click', (event) => {
+    event.preventDefault();
 
-		nombreProducto.classList.add('formulario__input-invalid');
-		spanNombreProducto.classList.add('span-nombre-producto-invalid');
-		spanNombreProducto.innerHTML = 'El nombre del producto no puede ser nulo (al menos 10 caracteres)';
+    if (campos.imagenPr && campos.nombrePr && campos.precioPr && campos.descripcionPr) {
+        //Si estan todos los campos llenos y validados, mando a enviar el formulario
+        dragToUploadForm.reset();
 
-	} else {
+        document.querySelector('.mensaje-satisfactorio').classList.remove('mensaje-satisfactorio-invalid');
+        document.querySelector('.mensaje-satisfactorio').innerHTML = 'El producto se ha agregado correctamente';
 
-	}
+        document.querySelector('.mensaje-satisfactorio').classList.add('mensaje-satisfactorio-valid');
+
+        setTimeout(() => {
+            document.querySelector('.mensaje-satisfactorio').classList.remove('mensaje-satisfactorio-valid');
+            location.reload();
+        }, 5000);
+    } else {
+        document.querySelector('.mensaje-satisfactorio').classList.add('mensaje-satisfactorio-invalid');
+        document.querySelector('.mensaje-satisfactorio').innerHTML = 'Por favor, complete los campos correctamente';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+nombreProducto.addEventListener('blur', function() {
+  //cuando pierde el foco analizo si el campo esta vacío
+
+
+
+
+
 
 
 });
 
-nombreProducto.addEventListener('blur', function(){
-	//cuando pierde el foco analizo si el campo esta vacío 
+precioProducto.addEventListener('blur', function() {
 
-	if (nombreProducto.value === '' || nombreProducto.value === null) {
-
-		nombreProducto.classList.add('formulario__input-invalid');
-		spanNombreProducto.classList.add('span-nombre-producto-invalid');
-		spanNombreProducto.innerHTML = 'El nombre del producto no puede ser nulo (al menos 10 caracteres)';
-
-	} else {
-
-	}
-
-
-	
-
-
-});
-
-precioProducto.addEventListener('blur', function(){
-
-	if (precioProducto.value === '' || precioProducto.value === null) {
-
-		precioProducto.classList.add('formulario__input-invalid');
-		spanPrecioProducto.classList.add('span-precio-producto-invalid');
-		spanPrecioProducto.innerHTML = 'El precio del producto no puede ser nulo';
-
-	} else {
-
-	}
+    
 
 
 
 });
 
+descripcionProducto.addEventListener('blur', function() {
 
-spanDescripcionProducto.addEventListener('blur', function(){
-
-	if (descripcionProducto.value === '' || descripcionProducto.value === null) {
-
-		descripcionProducto.classList.add('formulario__input-invalid');
-		spanDescripcionProducto.classList.add('span-descripcion-producto-producto-invalid');
-		spanDescripcionProducto.innerHTML = 'Debe agregar una descripción del producto';
-
-	} else {
-
-	}
+    
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // class Producto {
 //     static contadorProductos = 0;
