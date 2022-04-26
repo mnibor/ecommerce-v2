@@ -8,6 +8,61 @@ html {
 	flex-direction: column;
 }
 
+.tabla__mensajes {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.tabla__mensajes-row {
+    font-size: 16px;
+}
+
+.tabla__mensajes-cabecera {
+    font-weight: bold;
+}
+
+.tabla__mensajes-items {
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabla__mensajes-iconos {
+    padding: 8px;
+    border-radius: 5px;
+    /* margin: 2px; */
+}
+
+.tabla__mensajes-link {
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+}
+
+.edicion {
+    background-color: orangered;
+}
+
+.eliminar {
+    background-color: red;
+}
+
+.acciones {
+    width: 120px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+}
+
 @media screen and (max-width: 768px) {
     
 }

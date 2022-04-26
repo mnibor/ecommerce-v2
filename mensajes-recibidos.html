@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AluraGeek</title>
+    <link rel="icon" href="images/ico.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,600;1,200;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-login.css">
+
+
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/todos-productos.css">
+
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/formulario.css">
+
+</head>
+<body>
+    <div class="container">
+		<header class="header">
+			<div class="header__menu">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a class="header__logo-link" href="index.html"><img class="header__logo-img" src="images/logo.svg" alt=""></a>
+                    </div>
+
+                    <div class="header__busqueda">
+                        <form class="header__formulario">
+                            <input class="formulario__input-busqueda" type="search" placeholder="Qué deseas buscar ?" aria-label="Search">
+                            <button class="boton__busqueda" type="submit"><i class="boton__icono fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="header__botones">
+                    <div class="header__buscar">
+                        <a class="boton__buscar boton--relative" href="#" role="button">
+                            <!-- BLOQUE -->
+                            <i class="boton__icono fas fa-search"></i></i>
+                        </a>
+                    </div>
+
+                    <div class="header__login">
+                        <a class="boton__login boton--relative boton--verde" href="login.html" role="button">
+                            <span class="boton__texto">Ingresar</span>
+                            <i class="boton__icono fas fa-sign-in-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="header__login-simplificado">
+                        <a class="boton__login-simplificado boton--relative boton--verde" href="login.html" role="button">
+                            <i class="boton__icono fas fa-sign-in-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+		</header>
+
+		<main class="productos-todos">
+            <div class="productos-todos__container">
+                <div class="stars-wars">
+                    <div class="starswars__container">
+                        <div class="producto-titulo">
+                            <h1 class="producto-titulo-texto">Mensajes Recibidos</h1>
+                        </div>
+        
+                        <div class="starswars__container-productos">
+                            <table class="tabla__mensajes">
+                                <tr class="tabla__mensajes-row">
+                                    <td class="tabla__mensajes-cabecera">ID</td>
+                                    <td class="tabla__mensajes-cabecera">ENVIADO POR</td>
+                                    <td class="tabla__mensajes-cabecera">MENSAJE</td>
+                                    <td class="tabla__mensajes-cabecera acciones">ACCIONES</td>
+                                </tr>
+                                
+                                <tbody data-table></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</main>
+
+        
+
+		<footer class="footer">
+            <p class="footer__texto">Desarrollado por Marcelo Robin</p><br>
+            <p class="footer__texto">&copy;2022</p>
+		</footer>
+	</div>
+
+    <script src="js/services.js"></script>
+</body>
+</html>

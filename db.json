@@ -1,0 +1,44 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "imagen": "imagen.png",
+      "nombre": "Producto A",
+      "precio": 105.30,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 2,
+      "imagen": "imagen.png",
+      "nombre": "Producto B",
+      "precio": 440.00,
+      "descripcion": "Consola NPM desarrollada por Github"
+    }
+  ],
+  "mensajes": [
+    {
+      "id": 1,
+      "nombre": "Mariano Carrizo",
+      "mensaje": "Estoy viendo de comprar una consola NPM, necesitaria asesoramiento"
+    },
+    {
+      "id": 2,
+      "nombre": "Juliana Gomez",
+      "mensaje": "Necesito saber si tienen stock de mandos para PlayStation"
+    },
+    {
+      "id": 3,
+      "nombre": "Gonza Lopez",
+      "mensaje": "Quiero saber si NPM es mejor que PlayStation"
+    },
+    {
+      "id": 4,
+      "nombre": "Marcelo Jepez",
+      "mensaje": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere delectus nesciunt laudantium asperiores architecto libero sunt alias quod quas."
+    }
+  ],
+  "usuarios": {
+    "email": "correo@correo.com",
+    "password": "12345678"
+  }
+}
