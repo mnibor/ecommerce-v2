@@ -8,33 +8,33 @@ html {
 	flex-direction: column;
 }
 
-.tabla__mensajes {
+.tabla__mensajes, .tabla__usuarios {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     border: 2px solid rgb(53, 53, 53);
 }
 
-.tabla__mensajes-row {
+.tabla__mensajes-row, .tabla__usuarios-row {
     font-size: 16px;
 }
 
-.tabla__mensajes-cabecera {
+.tabla__mensajes-cabecera, .tabla__usuarios-cabecera {
     font-weight: bold;
 }
 
-.tabla__mensajes-items {
+.tabla__mensajes-items, .tabla__usuarios-items {
     font-size: 16px;
     text-align: left;
 }
 
-.tabla__mensajes-iconos {
+.tabla__mensajes-iconos, .tabla__usuarios-iconos {
     padding: 8px;
     border-radius: 5px;
     /* margin: 2px; */
 }
 
-.tabla__mensajes-link {
+.tabla__mensajes-link, .tabla__usuarios-link {
     text-decoration: none;
     color: white;
     margin: 0 5px;
@@ -61,6 +61,44 @@ td, th {
     border: 1px solid #ccc;
     text-align: left;
     padding: 8px;
+}
+
+/* PAGINA DE ERROR */
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    margin: 40px;
+}
+
+.error__icono {
+
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+
+}
+
+.error__titulo-1 {
+
+    font-size: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+    color: red;
+    margin: 10px 0;
+
+}
+
+.error__titulo-2 {
+    font-size: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    color: rgb(56, 56, 56);
+
+    margin: 10px 0;
 }
 
 @media screen and (max-width: 768px) {

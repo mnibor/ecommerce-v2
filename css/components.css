@@ -15,6 +15,17 @@
     
 }
 
+.cardProducto__categoria {
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #2A7AE4;
+	padding: 3px 10px;
+	border-radius: 0px 7px;
+	margin-bottom: 5px;
+}
+
 .cardProducto__titulo {
     font-size:14px;
     line-height: 0;

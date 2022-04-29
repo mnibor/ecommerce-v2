@@ -2,22 +2,152 @@
   "productos": [
     {
       "id": 1,
-      "imagen": "imagen.png",
+      "imagen": "images/stars-wars/01.jpg",
+      "categoria": "StarsWars",
       "nombre": "Producto A",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
     {
       "id": 2,
-      "imagen": "imagen.png",
+      "imagen": "images/stars-wars/02.jpg",
+      "categoria": "StarsWars",
       "nombre": "Producto B",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 3,
+      "imagen": "images/stars-wars/03.jpg",
+      "categoria": "StarsWars",
+      "nombre": "Producto C",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 4,
+      "imagen": "images/stars-wars/04.jpg",
+      "categoria": "StarsWars",
+      "nombre": "Producto D",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 5,
+      "imagen": "images/stars-wars/05.jpg",
+      "categoria": "StarsWars",
+      "nombre": "Producto E",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 6,
+      "imagen": "images/stars-wars/06.jpg",
+      "categoria": "StarsWars",
+      "nombre": "Producto F",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 7,
+      "imagen": "images/consolas/01.jpg",
+      "categoria": "Consolas",
+      "nombre": "Producto A",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 8,
+      "imagen": "images/consolas/02.jpg",
+      "categoria": "Consolas",
+      "nombre": "Producto B",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 9,
+      "imagen": "images/consolas/03.jpg",
+      "categoria": "Consolas",
+      "nombre": "Producto C",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 10,
+      "imagen": "images/consolas/04.jpg",
+      "categoria": "Consolas",
+      "nombre": "Producto D",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 11,
+      "imagen": "images/consolas/05.jpg",
+      "categoria": "Consolas",
+      "nombre": "Producto E",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 12,
+      "imagen": "images/consolas/06.jpg",
+      "categoria": "Consolas",
+      "nombre": "Producto F",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 13,
+      "imagen": "images/diversos/01.jpg",
+      "categoria": "Diversos",
+      "nombre": "Producto F",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 14,
+      "imagen": "images/diversos/02.jpg",
+      "categoria": "Diversos",
+      "nombre": "Producto A",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 15,
+      "imagen": "images/diversos/03.jpg",
+      "categoria": "Diversos",
+      "nombre": "Producto B",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 16,
+      "imagen": "images/diversos/04.jpg",
+      "categoria": "Diversos",
+      "nombre": "Producto C",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": 17,
+      "imagen": "images/diversos/05.jpg",
+      "categoria": "Diversos",
+      "nombre": "Producto D",
+      "precio": 440,
+      "descripcion": "Consola NPM desarrollada por Github"
+    },
+    {
+      "id": 18,
+      "imagen": "images/diversos/06.jpg",
+      "categoria": "Diversos",
+      "nombre": "Producto E",
+      "precio": 105.3,
+      "descripcion": "Producto importado, con acabado en acero inoxidable"
     }
   ],
   "mensajes": [
     {
-      "nombre": "Mariano Carrizo Lopez",
+      "nombre": "Jesuzo Lopez",
       "mensaje": "Estoy viendo de comprar una consola NPM, necesitaria asesoramiento sobre Nintendo",
       "id": 1
     },
@@ -27,13 +157,61 @@
       "id": 2
     },
     {
-      "nombre": "Pancho Lopez",
-      "mensaje": "Quiero saber si NPM es mejor que PlayStation y tambien un nintendo",
-      "id": 3
+      "id": "5bad6e49-5efe-49d6-80fd-18335bf1c8f6",
+      "nombre": "Marcelo Andre Robin",
+      "mensaje": "probando un mensaje de contacto"
+    },
+    {
+      "id": "91aa994f-2906-4342-b790-67b9a7094d2b",
+      "nombre": "Marcelo Andre Robin",
+      "mensaje": "probamdo desde todos los productos"
+    },
+    {
+      "id": "1302b893-db42-47e9-a720-378ab67f177d",
+      "nombre": "Marcelo Andre Robin",
+      "mensaje": "probando desde producto detalle"
+    },
+    {
+      "id": "ec08436f-2ad8-4e36-b31e-635236975d36",
+      "nombre": "Marcelo Andre Robin",
+      "mensaje": "probando enviar mensaje desde el login"
+    },
+    {
+      "id": "8e56bbe7-ac3f-4542-a191-243f19994c08",
+      "nombre": "Marcelo Andre Robin",
+      "mensaje": "probando mensaje desde nuevo producto"
+    },
+    {
+      "id": "f5666c72-f575-4f4c-80ee-1831b4de897f",
+      "nombre": "Marcelo Andre Robin",
+      "mensaje": "probando mensaje luego de "
     }
   ],
-  "usuarios": {
-    "email": "correo@correo.com",
-    "password": "12345678"
-  }
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "correo@correo.com",
+      "password": "Probando123"
+    },
+    {
+      "id": "ee3a154d-f300-48b5-a8c7-f440e502c620",
+      "email": "marcelorobin@gmail.com",
+      "password": "Probando123"
+    },
+    {
+      "id": "651caa12-0458-4090-a57e-d611a7f8b3bd",
+      "email": "marcelorobin@gmail.com",
+      "password": "probando123"
+    },
+    {
+      "id": "1aa0b008-8cc8-4fe2-956f-be814e460b2a",
+      "email": "marcelorobin@gmail.com",
+      "password": "Probando123"
+    },
+    {
+      "id": "eb246eef-acc6-4b76-baca-fcc0985fde0a",
+      "email": "findergreenenergy@gmail.com",
+      "password": "123Probando"
+    }
+  ]
 }

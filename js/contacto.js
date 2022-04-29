@@ -77,7 +77,7 @@ function validarMensaje (mensaje) {
         errorMensaje();
         campos.mensajeMsj = false;
     } else {
-        existeNombre();
+        existeMensaje();
         campos.mensajeMsj = true;
     }
 }

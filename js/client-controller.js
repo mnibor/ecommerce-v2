@@ -1,5 +1,6 @@
 import { clientServices } from "./services.js";
 
+// MENSAJES RECIBIDOS
 const crearNuevaLinea = (id, nombre, mensaje) => {
     const linea = document.createElement('tr');
 
@@ -39,5 +40,3 @@ clientServices.listaMensajes().then((data) => {
         table.appendChild(nuevaLinea);
     });
 }).catch((error) => alert('Ocurrió un error en la Conexión'));
-
-

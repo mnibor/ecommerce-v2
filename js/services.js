@@ -30,3 +30,4 @@ export const clientServices = {
     detalleMensaje,
     actualizarMensaje,
 };
+

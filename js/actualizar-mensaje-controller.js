@@ -2,7 +2,7 @@ import { clientServices } from './services.js';
 
 const formulario = document.querySelector('.form')
 
-const obtenerInformacion = () => {
+const obtenerInformacion = async() => {
     const url = new URL(window.location);
     const id = url.searchParams.get('id');
 
@@ -13,10 +13,27 @@ const obtenerInformacion = () => {
     const nombre = document.querySelector('[data-form-nombre]');
     const mensaje = document.querySelector('[data-form-mensaje]');
 
-    clientServices.detalleMensaje(id).then( msj => {
-        nombre.value = msj.nombre;
-        mensaje.value = msj.mensaje;
-    });
+    try {
+
+        const msj = await clientServices.detalleMensaje(id);
+
+        if (msj.nombre && msj.mensaje) {
+
+            nombre.value = msj.nombre;
+            mensaje.value = msj.mensaje;
+            
+        } else {
+            throw new Error();
+        }
+        
+
+    } catch (error) {
+        console.log('Hubo un error - ', error);
+        window.location.href = 'error.html';
+    }
+
+    
+    
 };
 obtenerInformacion();
 
