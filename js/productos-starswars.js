@@ -21,7 +21,7 @@ const crearTarjeta = (id, imagen, categoria, nombre, precio) => {
 
     const contenido = `
             <div class="cardProducto__imagen">
-                <a href="producto_detalle.html"><img class="cardProducto__imagen-img" src="${imagen}" alt="producto"></a>
+                <a href="producto_detalle.html?id=${id}"><img class="cardProducto__imagen-img" src="${imagen}" alt="producto"></a>
             </div>
             <div class="cardProducto__texto">
                 <small class="cardProducto__categoria">${categoria}</small>
