@@ -19,3 +19,4 @@ Qué se puede mejorar:
 2.- Crear un ABM de Categorías
 3.- Modificar el index para que muestre los productos agrupados por categorías, tomadas desde la base de datos
 4.- Mostrar una página para mostrar todos los productos de una categoría en si
+5.- Cada categoría podría estar representada por un color
