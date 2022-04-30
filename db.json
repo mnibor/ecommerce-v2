@@ -1,7 +1,7 @@
 {
   "productos": [
     {
-      "id": 1,
+      "id": "ec08438f-2ad8-4e36-b31e-895236975d36",
       "imagen": "images/stars-wars/01.jpg",
       "categoria": "StarsWars",
       "nombre": "Producto A",
@@ -9,7 +9,7 @@
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
     {
-      "id": 2,
+      "id": "ec98438f-2ad8-4e36-b31e-895236975d66",
       "imagen": "images/stars-wars/02.jpg",
       "categoria": "StarsWars",
       "nombre": "Producto B",

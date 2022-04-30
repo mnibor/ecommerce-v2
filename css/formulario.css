@@ -21,6 +21,33 @@
     font-size: 14px;
 }
 
+
+.formulario__select {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    border: 1px solid #464646;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 10px;
+    transition: .3s ease all;
+    font-size: 14px;
+}
+
+.select-item {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    border: 1px solid #464646;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 10px 0;
+}
+
 .formulario__input:hover {
     border: 2px solid blue;
 }
@@ -45,6 +72,14 @@
 	padding: 5px 10px;
 	transition: .3s ease all;
     font-size: 14px;
+}
+
+.formulario__select-invalid {
+    border: 2px solid red;
+}
+
+.formulario__select-valid {
+    border: 2px solid green;
 }
 
 .formulario__textarea:hover {
@@ -105,6 +140,8 @@
 .formulario__boton:hover {
     background-color: blue;
 }
+
+
 
 @media screen and (max-width: 470px) {
     .formulario__label {

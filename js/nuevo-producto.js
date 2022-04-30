@@ -94,6 +94,8 @@ function showFile(files) {
 
 const formulario = document.querySelector('.dragToUploadForm');
 
+const categoriaProducto = document.querySelector('#categoria');
+
 const nombreProducto = document.querySelector('#nombreProducto');
 const precioProducto = document.querySelector('#precioProducto');
 const descripcionProducto = document.querySelector('#descripcionProducto');
@@ -107,7 +109,7 @@ const inputs = document.querySelectorAll('#dragToUploadForm input');
 const expresionesRegulares = {
     nombreProd: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/,
     precioProd: /^[0-9]{1,5}[.,][0-9]{2}$/,
-    descripcionProd: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/
+    descripcionProd: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ.,]+$/
 };
 
 const btnEnviar = document.querySelector('.formulario__boton');
@@ -185,6 +187,13 @@ const validarFormulario = (e) => {
         }
     });
 
+    if(categoriaProducto.value == 'Selecciona una opción...'){
+        document.querySelector('#categoria').classList.add('formulario__select-invalid');
+    } else {
+        document.querySelector('#categoria').classList.remove('formulario__select-invalid');
+        document.querySelector('#categoria').classList.add('formulario__select-valid');
+    }
+
     
     // this.submit();
 }
@@ -224,7 +233,14 @@ btnEnviar.addEventListener('click', (event) => {
 
 
 
-
+categoriaProducto.addEventListener('click', (event) => {
+    if(categoriaProducto.value === 'Selecciona una opción...'){
+        document.querySelector('#categoria').classList.add('formulario__select-invalid');
+    } else {
+        document.querySelector('#categoria').classList.remove('formulario__select-invalid');
+        document.querySelector('#categoria').classList.add('formulario__select-valid');
+    }
+})
 
 
 
