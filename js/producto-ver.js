@@ -29,7 +29,7 @@ const mostrarProducto = (data) => {
 
 // Aca cargo la parte inferior de la página (seis productos aleatorios)
 const todosProductos = () => {
-    return fetch('http://localhost:3000/productos')
+    return fetch(`http://localhost:3000/productos?id_ne=${id}`) 
         .then(response => response.json())
         .then(json => productos(json))
         .catch((error) => console.log(error));
