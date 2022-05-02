@@ -82,14 +82,20 @@ td, th {
 
 }
 
-.error__titulo-1 {
+.ocultar {
+    display: none;
+}
 
+.mostrar {
+    display: block;
+}
+
+.error__titulo-1 {
     font-size: 30px;
     flex-wrap: wrap;
     text-align: center;
     color: red;
     margin: 10px 0;
-
 }
 
 .error__titulo-2 {

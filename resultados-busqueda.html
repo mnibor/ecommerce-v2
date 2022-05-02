@@ -12,11 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="stylesheet" href="css/header-login.css">
+
+
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/todos-productos.css">
+
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/productos.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/formulario.css">
 
@@ -31,10 +35,10 @@
                     </div>
 
                     <div class="header__busqueda">
-                        <!-- <form class="header__formulario"> -->
-                        <input class="formulario__input-busqueda" type="search" placeholder="Qué deseas buscar ?" aria-label="Search">
-                        <button class="boton__busqueda"><i class="boton__icono fas fa-search"></i></button>
-                        <!-- </form> -->
+                        <form class="header__formulario">
+                            <input class="formulario__input-busqueda" type="search" placeholder="Qué deseas buscar ?" aria-label="Search">
+                            <button class="boton__busqueda" type="submit"><i class="boton__icono fas fa-search"></i></button>
+                        </form>
                     </div>
                 </div>
 
@@ -60,63 +64,23 @@
                     </div>
                 </div>
             </div>
-
-            <div class="header__banner">
-                <div class="header__banner-container">
-                    <div class="header__banner-textos">
-                        <h1 class="header__banner-titulo">Abril Promocional</h1>
-                        <h3 class="header__banner-subtitulo">Productos seleccionados con el 33% de descuento</h3>
-                    </div>
-
-                    <div class="header__banner-boton">
-                        <a class="boton boton--relative" href="productos.html" role="button">
-                            <!-- BLOQUE -->
-                            <span class="boton__texto">Ver Consolas</span>
-                            <i class="boton__icono fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
 		</header>
 
-        <main class="productos">
-
-            <div class="stars-wars">
-                <div class="starswars__container">
-                    <div class="producto-titulo">
-                        <h1 class="producto-titulo-texto">Star Wars</h1>
-                        <a class="producto-titulo-link" href="productos.html">Ver todos <span><i class="fas fa-arrow-right"></i></span></a>
-                    </div>
-    
-                    <div class="starswars__container-productos">
-                    </div>
-                </div>
-            </div>
-    
-            <div class="consolas">
-                <div class="consolas__container">
-                    <div class="producto-titulo">
-                        <h1 class="producto-titulo-texto">Consolas</h1>
-                        <a class="producto-titulo-link" href="productos.html">Ver todos <span><i class="fas fa-arrow-right"></i></span></a>
-                    </div>
-    
-                    <div class="consolas__container-productos">
+		<main class="productos-todos">
+            <div class="productos-todos__container">
+                <div class="stars-wars">
+                    <div class="starswars__container">
+                        <div class="producto-titulo">
+                            <h1 class="producto-titulo-texto">Resultados de la Búsqueda</h1>
+                            <a class="producto-titulo-link" href="producto_nuevo.html">Nuevo Producto <span><i class="fas fa-plus-circle"></i></span></a>
+                        </div>
+        
+                        <div class="starswars__container-productos">
+                        </div>
                     </div>
                 </div>
             </div>
-    
-            <div class="diversos">
-                <div class="diversos__container">
-                    <div class="producto-titulo">
-                        <h1 class="producto-titulo-texto">Diversos</h1>
-                        <a class="producto-titulo-link" href="productos.html">Ver todos <span><i class="fas fa-arrow-right"></i></span></a>
-                    </div>
-    
-                    <div class="diversos__container-productos">
-                    </div>
-                </div>
-            </div>
-        </main>
+		</main>
 
         <div class="contacto">
             <div class="contacto__container">
@@ -164,17 +128,13 @@
             </div>
         </div>
 
-        <footer class="footer">
+		<footer class="footer">
             <p class="footer__texto">Desarrollado por Marcelo Robin</p><br>
             <p class="footer__texto">&copy;2022</p>
-        </footer>
+		</footer>
 	</div>
 
-    <script type="module" src="js/productos-starswars.js"></script>
-    <script type="module" src="js/productos-consolas.js"></script>
-    <script type="module" src="js/productos-diversos.js"></script>
-    <script type="module" src="js/busqueda.js"></script>
-    
+    <script type="module" src="js/productos-todos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="js/contacto.js"></script>
 </body>

@@ -4,7 +4,7 @@
       "id": "ec08438f-2ad8-4e36-b31e-895236975d36",
       "imagen": "images/stars-wars/01.jpg",
       "categoria": "StarsWars",
-      "nombre": "Producto A",
+      "nombre": "Taza StarsWars",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
@@ -12,7 +12,7 @@
       "id": "ec98438f-2ad8-4e36-b31e-895236975d66",
       "imagen": "images/stars-wars/02.jpg",
       "categoria": "StarsWars",
-      "nombre": "Producto B",
+      "nombre": "Pisa papeles",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "imagen": "images/stars-wars/03.jpg",
       "categoria": "StarsWars",
-      "nombre": "Producto C",
+      "nombre": "Muñeco Yoda",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "imagen": "images/stars-wars/04.jpg",
       "categoria": "StarsWars",
-      "nombre": "Producto D",
+      "nombre": "Muñeco soldado",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "imagen": "images/stars-wars/05.jpg",
       "categoria": "StarsWars",
-      "nombre": "Producto E",
+      "nombre": "Muñeco verde",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "imagen": "images/stars-wars/06.jpg",
       "categoria": "StarsWars",
-      "nombre": "Producto F",
+      "nombre": "Muñeco negro espada",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "imagen": "images/consolas/01.jpg",
       "categoria": "Consolas",
-      "nombre": "Producto A",
+      "nombre": "Mando XBox",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "imagen": "images/consolas/02.jpg",
       "categoria": "Consolas",
-      "nombre": "Producto B",
+      "nombre": "Consola PlayStation",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "imagen": "images/consolas/03.jpg",
       "categoria": "Consolas",
-      "nombre": "Producto C",
+      "nombre": "Consola Atari",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "imagen": "images/consolas/04.jpg",
       "categoria": "Consolas",
-      "nombre": "Producto D",
+      "nombre": "Mandos Atari",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
     },
@@ -84,7 +84,7 @@
       "id": 11,
       "imagen": "images/consolas/05.jpg",
       "categoria": "Consolas",
-      "nombre": "Producto E",
+      "nombre": "Consola Cuadrada",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
     },
@@ -92,7 +92,7 @@
       "id": 12,
       "imagen": "images/consolas/06.jpg",
       "categoria": "Consolas",
-      "nombre": "Producto F",
+      "nombre": "Atari portátil",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
     },
