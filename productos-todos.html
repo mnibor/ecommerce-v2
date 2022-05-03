@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AluraGeek</title>
+    <link rel="icon" href="images/ico.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,600;1,200;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header-login.css">
+
+
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/todos-productos.css">
+    <link rel="stylesheet" href="css/producto-detalle.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/formulario.css">
+
+</head>
+<body>
+    <div class="container">
+		<header class="header">
+			<div class="header__menu">
+                <div class="header__container">
+                    <div class="header__logo">
+                        <a class="header__logo-link" href="index.html"><img class="header__logo-img" src="images/logo.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+		</header>
+
+		<main class="productos-todos">
+            <div class="productos-todos__container">
+                <div class="stars-wars">
+                    <div class="starswars__container">
+                        <div class="producto-titulo">
+                            <h1 class="producto-titulo-texto">Todos los Productos</h1>
+                        </div>
+        
+                        <div class="starswars__container-productos">
+                            <table class="tabla__mensajes">
+                                <tr class="tabla__mensajes-row">
+                                    <td class="tabla__mensajes-cabecera">CATEGORIA</td>
+                                    <td class="tabla__mensajes-cabecera">NOMBRE</td>
+                                    <td class="tabla__mensajes-cabecera">PRECIO</td>
+                                    <td class="tabla__mensajes-cabecera acciones">ACCIONES</td>
+                                </tr>
+                                
+                                <tbody data-table></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</main>
+
+        
+
+		<footer class="footer">
+            <p class="footer__texto">Desarrollado por Marcelo Robin</p><br>
+            <p class="footer__texto">&copy;2022</p>
+		</footer>
+	</div>
+
+    <script type="module" src="js/product-controller.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
     {
       "id": "ec08438f-2ad8-4e36-b31e-895236975d36",
       "imagen": "images/stars-wars/01.jpg",
-      "categoria": "StarsWars",
+      "categoria": "starswars",
       "nombre": "Taza StarsWars",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -11,7 +11,7 @@
     {
       "id": "ec98438f-2ad8-4e36-b31e-895236975d66",
       "imagen": "images/stars-wars/02.jpg",
-      "categoria": "StarsWars",
+      "categoria": "starswars",
       "nombre": "Pisa papeles",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "imagen": "images/stars-wars/03.jpg",
-      "categoria": "StarsWars",
+      "categoria": "starswars",
       "nombre": "Muñeco Yoda",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "imagen": "images/stars-wars/04.jpg",
-      "categoria": "StarsWars",
+      "categoria": "starswars",
       "nombre": "Muñeco soldado",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "imagen": "images/stars-wars/05.jpg",
-      "categoria": "StarsWars",
+      "categoria": "starswars",
       "nombre": "Muñeco verde",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -43,7 +43,7 @@
     {
       "id": 6,
       "imagen": "images/stars-wars/06.jpg",
-      "categoria": "StarsWars",
+      "categoria": "starswars",
       "nombre": "Muñeco negro espada",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -51,7 +51,7 @@
     {
       "id": 7,
       "imagen": "images/consolas/01.jpg",
-      "categoria": "Consolas",
+      "categoria": "consolas",
       "nombre": "Mando XBox",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -59,7 +59,7 @@
     {
       "id": 8,
       "imagen": "images/consolas/02.jpg",
-      "categoria": "Consolas",
+      "categoria": "consolas",
       "nombre": "Consola PlayStation",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -67,7 +67,7 @@
     {
       "id": 9,
       "imagen": "images/consolas/03.jpg",
-      "categoria": "Consolas",
+      "categoria": "consolas",
       "nombre": "Consola Atari",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -75,7 +75,7 @@
     {
       "id": 10,
       "imagen": "images/consolas/04.jpg",
-      "categoria": "Consolas",
+      "categoria": "consolas",
       "nombre": "Mandos Atari",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -83,7 +83,7 @@
     {
       "id": 11,
       "imagen": "images/consolas/05.jpg",
-      "categoria": "Consolas",
+      "categoria": "consolas",
       "nombre": "Consola Cuadrada",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -91,7 +91,7 @@
     {
       "id": 12,
       "imagen": "images/consolas/06.jpg",
-      "categoria": "Consolas",
+      "categoria": "consolas",
       "nombre": "Atari portátil",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -99,7 +99,7 @@
     {
       "id": 13,
       "imagen": "images/diversos/01.jpg",
-      "categoria": "Diversos",
+      "categoria": "diversos",
       "nombre": "Producto F",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -107,7 +107,7 @@
     {
       "id": 14,
       "imagen": "images/diversos/02.jpg",
-      "categoria": "Diversos",
+      "categoria": "diversos",
       "nombre": "Producto A",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -115,7 +115,7 @@
     {
       "id": 15,
       "imagen": "images/diversos/03.jpg",
-      "categoria": "Diversos",
+      "categoria": "diversos",
       "nombre": "Producto B",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -123,7 +123,7 @@
     {
       "id": 16,
       "imagen": "images/diversos/04.jpg",
-      "categoria": "Diversos",
+      "categoria": "diversos",
       "nombre": "Producto C",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
@@ -131,7 +131,7 @@
     {
       "id": 17,
       "imagen": "images/diversos/05.jpg",
-      "categoria": "Diversos",
+      "categoria": "diversos",
       "nombre": "Producto D",
       "precio": 440,
       "descripcion": "Consola NPM desarrollada por Github"
@@ -139,10 +139,18 @@
     {
       "id": 18,
       "imagen": "images/diversos/06.jpg",
-      "categoria": "Diversos",
+      "categoria": "diversos",
       "nombre": "Producto E",
       "precio": 105.3,
       "descripcion": "Producto importado, con acabado en acero inoxidable"
+    },
+    {
+      "id": "54052d0a-d66f-4a28-8673-b075dea97a7e",
+      "imagen": "https://placehold.co/400x400",
+      "categoria": "starswars",
+      "nombre": "Espada Láser lumínica",
+      "precio": "454.99",
+      "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac leo lorem. Suspendisse eget elit et dolor maximus semper et sed felis. Curabitur commodo, nulla ornare ornare blandit, "
     }
   ],
   "mensajes": [

@@ -1,4 +1,4 @@
-let uri = 'http://localhost:3000/productos?categoria=Diversos';
+let uri = 'http://localhost:3000/productos?categoria=diversos';
 
 fetch(uri)
     .then(response => response.json())

@@ -67,6 +67,33 @@
     font-size: 32px;
 }
 
+.acciones {
+    display: flex;
+    justify-content:flex-end;
+}
+
+.btnEditar {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(230, 138, 0);
+    color:aliceblue;
+    padding: 8px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.btnBorrar {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: red;
+    color:aliceblue;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+
+
 /* SIMILARES */
 
 /* STARS-WARS */

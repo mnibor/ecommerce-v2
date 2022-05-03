@@ -6,6 +6,7 @@ let files;
 
 const campos = {
     imagenPr: false,
+    categoriaPr: false,
     nombrePr: false,
     precioPr: false,
     descripcionPr: false
@@ -103,6 +104,7 @@ const descripcionProducto = document.querySelector('#descripcionProducto');
 const spanNombreProducto = document.querySelector('.span-nombre-producto');
 const spanPrecioProducto = document.querySelector('.span-precio-producto');
 const spanDescripcionProducto = document.querySelector('.span-descripcion-producto');
+const spanCategoriaProducto = document.querySelector('.span-categoria-producto');
 
 const inputs = document.querySelectorAll('#dragToUploadForm input');
 
@@ -117,103 +119,34 @@ const btnEnviar = document.querySelector('.formulario__boton');
 dragToUploadForm.addEventListener('submit', (event) => {
     // Controlo el evento de apretar el boton submit
     event.preventDefault();
-});
 
-const validarFormulario = (e) => {
-    switch (e.target.name) {
-        case 'nombreProducto':
-            if (expresionesRegulares.nombreProd.test(e.target.value)) {
-                nombreProducto.classList.remove('formulario__input-invalid');
-                nombreProducto.classList.add('formulario__input-valid');
-                spanNombreProducto.classList.remove('span-nombre-producto-invalid');
-                campos['nombrePr'] = true;
-            } else {
-                nombreProducto.classList.add('formulario__input-invalid');
-                spanNombreProducto.classList.add('span-nombre-producto-invalid');
-                spanNombreProducto.innerHTML = 'El nombre del producto debe tener entre 8 y 25 caracteres';
-                campos['nombrePr'] = false;
-            }
-            
-            break;
-
-        case 'precioProducto':
-            if (expresionesRegulares.precioProd.test(e.target.value)) {
-                precioProducto.classList.remove('formulario__input-invalid');
-                precioProducto.classList.add('formulario__input-valid');
-                spanPrecioProducto.classList.remove('span-precio-producto-invalid');
-                campos['precioPr'] = true;
-            } else {
-                precioProducto.classList.add('formulario__input-invalid');
-                spanPrecioProducto.classList.add('span-precio-producto-invalid');
-                spanPrecioProducto.innerHTML = 'El precio solo lleva separador de decimales (un punto o una coma';
-                campos['precioPr'] = false;
-            }
-        
-            break;
-
-        case 'input-file':
-
-            break;
-    
-        default:
-            break;
-    } 
-
-    descripcionProducto.addEventListener('keyup', (e) => {
-        if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
-            descripcionProducto.classList.remove('formuario__textarea-invalid');
-            descripcionProducto.classList.add('formuario__textarea-valid');
-            spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
-            campos['descripcionPr'] = true;
-        } else {
-            descripcionProducto.classList.add('formuario__textarea-invalid');
-            spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
-            spanDescripcionProducto.innerHTML = 'Debe incluir una descripcion del producto. Solo caracteres alfabéticos';
-            campos['descripcionPr'] = false;
-        }
-    });
-
-    descripcionProducto.addEventListener('blur', (e) => {
-        if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
-            descripcionProducto.classList.remove('formulario__textarea-invalid');
-            descripcionProducto.classList.add('formulario__textarea-valid');
-            spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
-            campos['descripcionPr'] = true;
-        } else {
-            descripcionProducto.classList.add('formulario__textarea-invalid');
-            spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
-            spanDescripcionProducto.innerHTML = 'Debe incluir una descripcion del producto. Solo caracteres alfabéticos';
-            campos['descripcionPr'] = false;
-        }
-    });
-
-    if(categoriaProducto.value == 'Selecciona una opción...'){
-        document.querySelector('#categoria').classList.add('formulario__select-invalid');
-    } else {
-        document.querySelector('#categoria').classList.remove('formulario__select-invalid');
-        document.querySelector('#categoria').classList.add('formulario__select-valid');
-    }
-
-    
-    // this.submit();
-}
-
-
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});
-
-
-
-
-
-btnEnviar.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    if (campos.imagenPr && campos.nombrePr && campos.precioPr && campos.descripcionPr) {
+    validarFormulario();
+    if (campos.imagenPr && campos.categoriaPr && campos.nombrePr && campos.precioPr && campos.descripcionPr) {
         //Si estan todos los campos llenos y validados, mando a enviar el formulario
-        dragToUploadForm.reset();
+
+
+        const crearProduc = (imagen, categoria, nombre, precio, descripcion) => fetch('http://localhost:3000/productos', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({id: uuid.v4(), imagen, categoria, nombre, precio, descripcion})
+        });
+
+        let imagen = 'https://placehold.co/400x400';
+
+
+        crearProduc(imagen,  categoriaProducto.value, nombreProducto.value, precioProducto.value, descripcionProducto.value);
+        console.log(imagen);
+        console.log(categoriaProducto.value);
+        console.log(nombreProducto.value);
+        console.log(precioProducto.value);
+        console.log(descripcionProducto.value);
+
+        
+
+
+        // dragToUploadForm.reset();
 
         document.querySelector('.mensaje-satisfactorio').classList.remove('mensaje-satisfactorio-invalid');
         document.querySelector('.mensaje-satisfactorio').innerHTML = 'El producto se ha agregado correctamente';
@@ -225,20 +158,198 @@ btnEnviar.addEventListener('click', (event) => {
             location.reload();
         }, 5000);
     } else {
+        
+        
         document.querySelector('.mensaje-satisfactorio').classList.add('mensaje-satisfactorio-invalid');
         document.querySelector('.mensaje-satisfactorio').innerHTML = 'Por favor, complete los campos correctamente';
     }
+
 });
+
+const validarFormulario = () => {
+
+    // VALIDACION DEL CAMPO CATEGORIA
+    if (categoriaProducto.value == 'Selecciona una opción...') {
+        categoriaProducto.classList.add('formulario__select-invalid');
+        spanCategoriaProducto.classList.add('span-categoria-producto-invalid');
+        spanCategoriaProducto.innerHTML = 'Debe seleccionar un elemento de la lista desplegable';
+        campos['categoriaPr'] = false;
+    } else {
+        categoriaProducto.classList.remove('formulario__select-invalid');
+        categoriaProducto.classList.add('formulario__select-valid');
+        spanCategoriaProducto.classList.remove('span-categoria-producto-invalid');
+        campos['categoriaPr'] = true;
+    }
+
+    // VALIDACION DEL CAMPO NOMBRE DEL PRODUCTO
+    if (nombreProducto.value != '') {
+        // Si el nombre del producto no es nulo quiere decir que viene algo
+        if (expresionesRegulares.nombreProd.test(nombreProducto.value)) {
+            // Si el nombre del producto pasa la validacion, el nombre es valido
+            nombreProducto.classList.remove('formulario__input-invalid');
+            nombreProducto.classList.add('formulario__input-valid');
+            spanNombreProducto.classList.remove('span-nombre-producto-invalid');
+            campos['nombrePr'] = true;
+        } else {
+            validacionErronea(nombreProducto, 'El nombre del Producto no es valido');
+            campos['nombrePr'] = false;
+        }
+    } else {
+        validacionErronea(nombreProducto, 'El nombre del producto no puede ser nulo. Debe tener entre 8 y 25 caracteres');
+        campos['nombrePr'] = false;
+    }
+
+    // VALIDACION DEL CAMPO PRECIO
+    if (precioProducto.value != '') {
+        // Si el nombre del producto no es nulo quiere decir que viene algo
+        precioProducto.classList.remove('formulario__input-invalid');
+        precioProducto.classList.add('formulario__input-valid');
+        spanPrecioProducto.classList.remove('span-precio-producto-invalid');
+        campos['precioPr'] = true;
+    } else {
+        validacionErronea(precioProducto, 'El precio del producto no puede ser nulo');
+        campos['precioPr'] = false;
+    }
+
+    // VALIDACION DEL CAMPO DESCRIPCION
+    if (descripcionProducto.value != '') {
+        // Si la descripcion del producto no es nula es porque vino algo
+        if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
+            descripcionProducto.classList.remove('formulario__textarea-invalid');
+            descripcionProducto.classList.add('formulario__textarea-valid');
+            spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
+            campos['descripcionPr'] = true;
+        } else {
+            validacionErronea(descripcionProducto, 'La descripcion del producto no es valida');
+            campos['descripcionPr'] = false;
+        }
+    } else {
+        validacionErronea(descripcionProducto, 'La descripcion del producto es obligatoria');
+        campos['descripcionPr'] = false;
+    }
+};
+
+
+const validacionErronea = (campo, mensaje) => {
+    switch (campo.name) {
+        case 'nombreProducto':
+            nombreProducto.classList.add('formulario__input-invalid');
+            spanNombreProducto.classList.add('span-nombre-producto-invalid');
+            spanNombreProducto.innerHTML = mensaje;
+            break;
+
+        case 'precioProducto':
+            precioProducto.classList.add('formulario__input-invalid');
+            spanPrecioProducto.classList.add('span-precio-producto-invalid');
+            spanPrecioProducto.innerHTML = mensaje;
+            break;
+
+        case 'descripcionProducto':
+            descripcionProducto.classList.add('formulario__textarea-invalid');
+            spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
+            spanDescripcionProducto.innerHTML = mensaje;
+            break;
+    
+        default:
+            break;
+    }
+}
+
+    // switch (e.target.name) {
+    //     case 'nombreProducto':
+    //         if (expresionesRegulares.nombreProd.test(e.target.value)) {
+    //             
+    //         } else {
+    //             nombreProducto.classList.add('formulario__input-invalid');
+    //             spanNombreProducto.classList.add('span-nombre-producto-invalid');
+    //             spanNombreProducto.innerHTML = 'El nombre del producto debe tener entre 8 y 25 caracteres';
+    //             campos['nombrePr'] = false;
+    //         }
+            
+    //         break;
+
+    //     case 'precioProducto':
+    //         if (expresionesRegulares.precioProd.test(e.target.value)) {
+    //             precioProducto.classList.remove('formulario__input-invalid');
+    //             precioProducto.classList.add('formulario__input-valid');
+    //             spanPrecioProducto.classList.remove('span-precio-producto-invalid');
+    //             campos['precioPr'] = true;
+    //         } else {
+    //             precioProducto.classList.add('formulario__input-invalid');
+    //             spanPrecioProducto.classList.add('span-precio-producto-invalid');
+    //             spanPrecioProducto.innerHTML = 'El precio solo lleva separador de decimales (un punto o una coma';
+    //             campos['precioPr'] = false;
+    //         }
+        
+    //         break;
+
+    //     case 'input-file':
+
+    //         break;
+    
+    //     default:
+    //         break;
+    // } 
+
+    // descripcionProducto.addEventListener('keyup', (e) => {
+    //     if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
+    //         descripcionProducto.classList.remove('formuario__textarea-invalid');
+    //         descripcionProducto.classList.add('formuario__textarea-valid');
+    //         spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
+    //         campos['descripcionPr'] = true;
+    //     } else {
+    //         descripcionProducto.classList.add('formuario__textarea-invalid');
+    //         spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
+    //         spanDescripcionProducto.innerHTML = 'Debe incluir una descripcion del producto. Solo caracteres alfabéticos';
+    //         campos['descripcionPr'] = false;
+    //     }
+    // });
+
+    // descripcionProducto.addEventListener('blur', (e) => {
+    //     if (expresionesRegulares.descripcionProd.test(descripcionProducto.value)) {
+    //         descripcionProducto.classList.remove('formulario__textarea-invalid');
+    //         descripcionProducto.classList.add('formulario__textarea-valid');
+    //         spanDescripcionProducto.classList.remove('span-descripcion-producto-invalid');
+    //         campos['descripcionPr'] = true;
+    //     } else {
+    //         descripcionProducto.classList.add('formulario__textarea-invalid');
+    //         spanDescripcionProducto.classList.add('span-descripcion-producto-invalid');
+    //         spanDescripcionProducto.innerHTML = 'Debe incluir una descripcion del producto. Solo caracteres alfabéticos';
+    //         campos['descripcionPr'] = false;
+    //     }
+    // });
+
+
+
+    
+    // this.submit();
+
+
+
+
+
+
+
+
+
+// btnEnviar.addEventListener('click', (event) => {
+//     event.preventDefault();
+
+
+// });
 
 
 
 
 categoriaProducto.addEventListener('click', (event) => {
-    if(categoriaProducto.value === 'Selecciona una opción...'){
-        document.querySelector('#categoria').classList.add('formulario__select-invalid');
+    if (categoriaProducto.value == 'Selecciona una opción...') {
+        categoriaProducto.classList.add('formulario__select-invalid');
+        spanCategoriaProducto.classList.add('span-categoria-producto-invalid');
+        spanCategoriaProducto.innerHTML = 'Debe seleccionar un elemento de la lista desplegable';
     } else {
-        document.querySelector('#categoria').classList.remove('formulario__select-invalid');
-        document.querySelector('#categoria').classList.add('formulario__select-valid');
+        categoriaProducto.classList.remove('formulario__select-invalid');
+        categoriaProducto.classList.add('formulario__select-valid');
+        spanCategoriaProducto.classList.remove('span-categoria-producto-invalid');
     }
 })
 
@@ -246,8 +357,8 @@ categoriaProducto.addEventListener('click', (event) => {
 
 
 
-nombreProducto.addEventListener('blur', function() {
-  //cuando pierde el foco analizo si el campo esta vacío
+// nombreProducto.addEventListener('blur', function() {
+//   //cuando pierde el foco analizo si el campo esta vacío
 
 
 
@@ -255,78 +366,19 @@ nombreProducto.addEventListener('blur', function() {
 
 
 
-});
+// });
 
-precioProducto.addEventListener('blur', function() {
-
-    
-
-
-
-});
-
-descripcionProducto.addEventListener('blur', function() {
+// precioProducto.addEventListener('blur', function() {
 
     
 
-});
 
-// class Producto {
-//     static contadorProductos = 0;
 
-//     constructor(imagen, nombre, precio, descripcion){
-//         this._idProducto = ++Producto.contadorProductos;
-//         this._imagen = imagen,
-//         this._nombre = nombre;
-//         this._precio = precio;
-//         this._descripcion = descripcion;
-//     }
+// });
 
-//     get idProducto(){
-//         return this._idProducto;
-//     }
+// descripcionProducto.addEventListener('blur', function() {
 
-//     get imagen(){
-//         return this._imagen;
-//     }
+    
 
-//     set imagen(imagen){
-//         this._imagen = imagen;
-//     }
+// });
 
-//     get nombre(){
-//         return this._nombre;
-//     }
-
-//     set nombre(nombre){
-//         this._nombre = nombre;
-//     }
-
-//     get precio(){
-//         return this._precio;
-//     }
-
-//     set precio(precio){
-//         this._precio = precio;
-//     }
-
-//     get descripcion(){
-//         return this._descripcion;
-//     }
-
-//     set descripcion(descripcion){
-//         this._descripcion = descripcion;
-//     }
-
-//     toString(){
-//         return `idProducto: ${this._idProducto}, nombre: ${this._nombre}, precio: ${this._precio}, descripcion: ${this._descripcion}`
-//     }
-
-// }
-
-// let producto1 = new Producto('https://placeimg.com/300/300/tech', 'Consola Nintendo', 300, 'consola de nintendo reparada');
-
-// let producto2 = new Producto('https://loremflickr.com/300/300', 'Comando PlayStation 5', 1300, 'comando consola de PlayStation 5 usada');
-
-// console.log(producto1.toString());
-// console.log(producto2.toString());

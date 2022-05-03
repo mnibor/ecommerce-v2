@@ -85,7 +85,7 @@
 }
 
 
-.span-nombre-producto, .span-precio-producto, .span-descripcion-producto{
+.span-nombre-producto, .span-precio-producto, .span-descripcion-producto, .span-categoria-producto{
     font-size: 12px;
     font-weight: bold;
     color: red;
@@ -93,7 +93,7 @@
     display: none;
 }
 
-.span-nombre-producto-invalid, .span-precio-producto-invalid, .span-descripcion-producto-invalid {
+.span-nombre-producto-invalid, .span-precio-producto-invalid, .span-descripcion-producto-invalid, .span-categoria-producto-invalid {
     display: block;
 }
 

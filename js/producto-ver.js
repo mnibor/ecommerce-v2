@@ -93,4 +93,4 @@ const crearTarjeta = (id, imagen, categoria, nombre, precio) => {
             </div>`;
     nuevaTarjeta.innerHTML = contenido;
     return nuevaTarjeta;
-}
+};
