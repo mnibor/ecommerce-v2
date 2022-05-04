@@ -2,7 +2,8 @@ import { productServices } from "./product-services.js";
 
 // TODOS LOS PRODUCTOS
 
-const table = document.querySelector('[data-table');
+const table = document.querySelector('.tabla-productos');
+const formulario = document.querySelector('#dragToUploadForm');
 
 const crearNuevaLinea = (id, categoria, nombre, precio) => {
     const linea = document.createElement('tr');
@@ -28,10 +29,10 @@ const crearNuevaLinea = (id, categoria, nombre, precio) => {
     });
 
     const btn2 = linea.querySelector('.btnEditar');
-    // btn2.addEventListener('click', () => {
-    //     const id = btn.id;
-    //     console.log('EL CLICK EDITAR' + id);
-    // });
+    btn2.addEventListener('click', () => {
+        const id = btn.id;
+        console.log('EL CLICK EDITAR' + id);
+    });
 
     return linea;
 };

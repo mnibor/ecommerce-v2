@@ -1,12 +1,12 @@
 {
   "productos": [
     {
-      "id": "ec08438f-2ad8-4e36-b31e-895236975d36",
       "imagen": "images/stars-wars/01.jpg",
       "categoria": "starswars",
       "nombre": "Taza StarsWars",
-      "precio": 105.3,
-      "descripcion": "Producto importado, con acabado en acero inoxidable"
+      "precio": "990",
+      "descripcion": "Quisque rutrum sed leo in ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam nisl, viverra lacinia nulla in, congue auctor massa. Mauris sit amet ipsum arcu. ",
+      "id": "ec08438f-2ad8-4e36-b31e-895236975d36"
     },
     {
       "id": "ec98438f-2ad8-4e36-b31e-895236975d66",
@@ -17,12 +17,12 @@
       "descripcion": "Consola NPM desarrollada por Github"
     },
     {
-      "id": 3,
       "imagen": "images/stars-wars/03.jpg",
       "categoria": "starswars",
       "nombre": "Muñeco Yoda",
-      "precio": 105.3,
-      "descripcion": "Producto importado, con acabado en acero inoxidable"
+      "precio": "780",
+      "descripcion": "Quisque rutrum sed leo in ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam nisl, viverra lacinia nulla in, congue auctor massa. Mauris sit amet ipsum arcu. ",
+      "id": 3
     },
     {
       "id": 4,
@@ -33,68 +33,68 @@
       "descripcion": "Consola NPM desarrollada por Github"
     },
     {
-      "id": 5,
       "imagen": "images/stars-wars/05.jpg",
       "categoria": "starswars",
       "nombre": "Muñeco verde",
-      "precio": 105.3,
-      "descripcion": "Producto importado, con acabado en acero inoxidable"
+      "precio": "850",
+      "descripcion": "Quisque rutrum sed leo in ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam nisl, viverra lacinia nulla in, congue auctor massa. Mauris sit amet ipsum arcu. ",
+      "id": 5
     },
     {
-      "id": 6,
       "imagen": "images/stars-wars/06.jpg",
       "categoria": "starswars",
       "nombre": "Muñeco negro espada",
-      "precio": 440,
-      "descripcion": "Consola NPM desarrollada por Github"
+      "precio": "440",
+      "descripcion": "Aliquam eu gravida est. Phasellus dictum, enim id euismod cursus, leo magna tristique felis, ac sagittis felis nisl non massa. Mauris ut velit quis libero vestibulum placerat.",
+      "id": 6
     },
     {
-      "id": 7,
       "imagen": "images/consolas/01.jpg",
       "categoria": "consolas",
       "nombre": "Mando XBox",
-      "precio": 105.3,
-      "descripcion": "Producto importado, con acabado en acero inoxidable"
+      "precio": "550",
+      "descripcion": "Nunc dignissim augue tellus, in tincidunt dui pretium id. Nullam id nisi tempor, gravida orci vel, gravida velit. Nam venenatis vulputate lorem sit amet rhoncus. ",
+      "id": 7
     },
     {
-      "id": 8,
       "imagen": "images/consolas/02.jpg",
       "categoria": "consolas",
       "nombre": "Consola PlayStation",
-      "precio": 440,
-      "descripcion": "Consola NPM desarrollada por Github"
+      "precio": "500",
+      "descripcion": "Phasellus vel imperdiet nibh, at dapibus nibh. Mauris nec quam pharetra, rutrum odio a, placerat nisi. Praesent nec massa eu odio pharetra volutpat. Sed nec turpis sem. Fusce laoreet diam ultricies ex pretium, id molestie elit pharetra.",
+      "id": 8
     },
     {
-      "id": 9,
       "imagen": "images/consolas/03.jpg",
       "categoria": "consolas",
       "nombre": "Consola Atari",
-      "precio": 105.3,
-      "descripcion": "Producto importado, con acabado en acero inoxidable"
+      "precio": "990",
+      "descripcion": "Donec imperdiet justo vel rhoncus hendrerit. Cras viverra tellus nisi, sit amet accumsan mi consectetur in. Aliquam interdum ante gravida, aliquet sapien non, bibendum dolor. ",
+      "id": 9
     },
     {
-      "id": 10,
       "imagen": "images/consolas/04.jpg",
       "categoria": "consolas",
       "nombre": "Mandos Atari",
-      "precio": 440,
-      "descripcion": "Consola NPM desarrollada por Github"
+      "precio": "440",
+      "descripcion": "Fusce finibus mauris sit amet lobortis interdum. Ut vitae volutpat metus. Aenean ultricies dolor a dui molestie, sed molestie tellus sollicitudin.",
+      "id": 10
     },
     {
-      "id": 11,
       "imagen": "images/consolas/05.jpg",
       "categoria": "consolas",
       "nombre": "Consola Cuadrada",
-      "precio": 105.3,
-      "descripcion": "Producto importado, con acabado en acero inoxidable"
+      "precio": "780",
+      "descripcion": "Curabitur ornare felis at mauris dapibus, vel gravida nunc finibus. Suspendisse potenti. Vestibulum at varius ligula, quis ullamcorper tortor. Ut id tincidunt purus. Nulla sit amet ornare ligula.",
+      "id": 11
     },
     {
-      "id": 12,
       "imagen": "images/consolas/06.jpg",
       "categoria": "consolas",
       "nombre": "Atari portátil",
-      "precio": 440,
-      "descripcion": "Consola NPM desarrollada por Github"
+      "precio": "440",
+      "descripcion": "Nullam congue sem non nisl pharetra, a varius risus congue. Donec elit nisi, cursus non arcu blandit, volutpat scelerisque ipsum.",
+      "id": 12
     },
     {
       "id": 13,
@@ -151,6 +151,22 @@
       "nombre": "Espada Láser lumínica",
       "precio": "454.99",
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac leo lorem. Suspendisse eget elit et dolor maximus semper et sed felis. Curabitur commodo, nulla ornare ornare blandit, "
+    },
+    {
+      "id": "ef75dac2-b8c8-4282-92bf-07a90dba2dad",
+      "imagen": "https://placehold.co/400x400",
+      "categoria": "consolas",
+      "nombre": "Consola Nintendo",
+      "precio": "1344.99",
+      "descripcion": "Integer at risus non dolor mollis vulputate. Mauris nec suscipit mauris, ut tempus ligula. Morbi volutpat porttitor gravida. Etiam eget turpis massa."
+    },
+    {
+      "imagen": "https://placehold.co/400x400",
+      "categoria": "diversos",
+      "nombre": "Buzo de Mario Bros",
+      "precio": "570.00",
+      "descripcion": "Etiam rhoncus maximus tellus, at viverra augue rutrum et. Mauris malesuada aliquam lacus, nec mattis arcu malesuada vel. Aliquam pellentesque, erat et rutrum bibendum, mi justo imperdiet mauris, a pellentesque mi purus ut dolor.",
+      "id": "3fbb6f43-30f7-4cae-aca7-b740652cc322"
     }
   ],
   "mensajes": [
@@ -220,6 +236,11 @@
       "id": "eb246eef-acc6-4b76-baca-fcc0985fde0a",
       "email": "findergreenenergy@gmail.com",
       "password": "123Probando"
+    },
+    {
+      "id": "21f1b8a5-9ff1-4a10-9678-5aa4787febf7",
+      "email": "mnibor@outlook.com",
+      "password": "Probando123"
     }
   ]
 }

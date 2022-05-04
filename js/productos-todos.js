@@ -1,4 +1,4 @@
-let uri = 'http://localhost:3000/productos';
+let uri = 'http://localhost:3000/productos?_sort=categoria';
 
 fetch(uri)
     .then(response => response.json())
